@@ -1,0 +1,27 @@
+-- Create Database
+CREATE DATABASE StudentDB;
+USE StudentDB;
+
+-- Create Table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(50) NOT NULL,
+    Class VARCHAR(20),
+    Marks INT,
+    Email VARCHAR(100)
+);
+
+-- Insert Records
+INSERT INTO Students (Name, Class, Marks, Email) VALUES
+('Rahul Sharma', '10th', 88, 'rahul@example.com'),
+('Priya Singh', '12th', 92, 'priya@example.com'),
+('Amit Verma', '10th', 76, 'amit@example.com');
+
+-- Retrieve Data
+SELECT * FROM Students;
+
+-- Update Marks
+UPDATE Students SET Marks = 95 WHERE Name = 'Priya Singh';
+
+-- Delete Record
+DELETE FROM Students WHERE Name = 'Amit Verma';
